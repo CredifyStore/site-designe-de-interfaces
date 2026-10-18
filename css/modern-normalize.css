@@ -1,0 +1,214 @@
+/*! modern-normalize v3.0.1 | MIT License | https://github.com/sindresorhus/modern-normalize */
+/* Comentários traduzidos para o português. O código CSS é o original. */
+
+/*
+Documento
+=========
+*/
+
+/**
+Usa um modelo de caixa melhor: width e height passam a incluir padding e borda.
+*/
+
+*,
+::before,
+::after {
+	box-sizing: border-box;
+}
+
+html {
+	/* Deixa a fonte padrão parecida em todos os navegadores. */
+	font-family:
+		system-ui,
+		'Segoe UI',
+		Roboto,
+		Helvetica,
+		Arial,
+		sans-serif,
+		'Apple Color Emoji',
+		'Segoe UI Emoji';
+	line-height: 1.15; /* 1. Corrige a altura da linha em todos os navegadores. */
+	-webkit-text-size-adjust: 100%; /* 2. Impede o ajuste automático do tamanho da fonte ao girar o celular (iOS). */
+	tab-size: 4; /* 3. Usa um tamanho de tabulação mais legível. */
+}
+
+/*
+Seções
+======
+*/
+
+body {
+	margin: 0; /* Remove a margem padrão em todos os navegadores. */
+}
+
+/*
+Semântica de texto
+==================
+*/
+
+/**
+Aplica o peso de fonte correto no Chrome e no Safari.
+*/
+
+b,
+strong {
+	font-weight: bolder;
+}
+
+/**
+1. Deixa a fonte padrão parecida em todos os navegadores.
+2. Corrige o tamanho estranho da unidade 'em' em fontes monoespaçadas.
+*/
+
+code,
+kbd,
+samp,
+pre {
+	font-family:
+		ui-monospace,
+		SFMono-Regular,
+		Consolas,
+		'Liberation Mono',
+		Menlo,
+		monospace; /* 1 */
+	font-size: 1em; /* 2 */
+}
+
+/**
+Aplica o tamanho de fonte correto em todos os navegadores.
+*/
+
+small {
+	font-size: 80%;
+}
+
+/**
+Impede que 'sub' e 'sup' (subscrito e sobrescrito) alterem a altura da linha.
+*/
+
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+sup {
+	top: -0.5em;
+}
+
+/*
+Dados tabulares
+===============
+*/
+
+/**
+Corrige a herança da cor da borda de tabelas no Chrome e no Safari.
+*/
+
+table {
+	border-color: currentcolor;
+}
+
+/*
+Formulários
+===========
+*/
+
+/**
+1. Muda os estilos de fonte em todos os navegadores.
+2. Remove a margem no Firefox e no Safari.
+*/
+
+button,
+input,
+optgroup,
+select,
+textarea {
+	font-family: inherit; /* 1 */
+	font-size: 100%; /* 1 */
+	line-height: 1.15; /* 1 */
+	margin: 0; /* 2 */
+}
+
+/**
+Permite estilizar botões clicáveis no iOS e no Safari.
+*/
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+	-webkit-appearance: button;
+}
+
+/**
+Remove o padding para evitar surpresas quando 'fieldset' é zerado.
+*/
+
+legend {
+	padding: 0;
+}
+
+/**
+Aplica o alinhamento vertical correto no Chrome e no Firefox.
+*/
+
+progress {
+	vertical-align: baseline;
+}
+
+/**
+Corrige o cursor dos botões de aumentar e diminuir no Safari.
+*/
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+	height: auto;
+}
+
+/**
+1. Corrige a aparência estranha no Chrome e no Safari.
+2. Corrige o estilo do contorno no Safari.
+*/
+
+[type='search'] {
+	-webkit-appearance: textfield; /* 1 */
+	outline-offset: -2px; /* 2 */
+}
+
+/**
+Remove o padding interno no Chrome e no Safari do macOS.
+*/
+
+::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
+/**
+1. Permite estilizar botões clicáveis no iOS e no Safari.
+2. Muda as propriedades de fonte para 'inherit' no Safari.
+*/
+
+::-webkit-file-upload-button {
+	-webkit-appearance: button; /* 1 */
+	font: inherit; /* 2 */
+}
+
+/*
+Interativos
+===========
+*/
+
+/*
+Aplica a exibição correta no Chrome e no Safari.
+*/
+
+summary {
+	display: list-item;
+}
