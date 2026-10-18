@@ -1,14 +1,13 @@
 body {
   font-family: "Nunito Sans", Arial, sans-serif;
   line-height: 1.6;
-  padding-top: 64px; /* espaço para o cabeçalho fixo */
+  padding-top: 64px;
 }
 
 h1, h2, h3 {
   font-family: Fraunces, Georgia, serif;
 }
 
-/* Cabeçalho fixo no topo */
 header {
   position: fixed;
   top: 0;
@@ -27,7 +26,6 @@ header h1 {
   margin: 0 0 0 0.75rem;
 }
 
-/* Menu sanduíche: a caixinha escondida abre e fecha a lista */
 nav {
   margin-left: auto;
 }
@@ -63,7 +61,6 @@ nav a {
   text-decoration: none;
 }
 
-/* Seções */
 section {
   max-width: 760px;
   margin: 0 auto;
@@ -75,7 +72,6 @@ img {
   height: auto;
 }
 
-/* Galeria com flexbox */
 #galeria {
   max-width: 1100px;
 }
