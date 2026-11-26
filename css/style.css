@@ -1,0 +1,259 @@
+:root {
+  --cor-fundo: #ffffff;
+  --cor-texto: #1d2338;
+  --cor-principal: #0f1b3d;
+  --cor-menu: #1b2a57;
+  --cor-destaque: #ffc83d;
+  --cor-suave: #f1f3fa;
+  --cor-borda: #c5cbe0;
+  --espaco: 1rem;
+  --altura-topo: 64px;
+  --raio: 8px;
+  --sombra: 0 2px 8px rgba(15, 27, 61, 0.25);
+  --fonte-texto: "Nunito Sans", Arial, sans-serif;
+  --fonte-titulo: Fraunces, Georgia, serif;
+}
+
+html {
+  scroll-padding-top: calc(var(--altura-topo) + var(--espaco));
+}
+
+body {
+  font-family: var(--fonte-texto);
+  line-height: 1.6;
+  color: var(--cor-texto);
+  background: var(--cor-fundo);
+  padding-top: var(--altura-topo);
+}
+
+h1, h2, h3 {
+  font-family: var(--fonte-titulo);
+  color: var(--cor-principal);
+  line-height: 1.2;
+}
+
+h2 {
+  margin-top: 2rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--cor-menu);
+}
+
+.cabecalho {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: var(--altura-topo);
+  display: flex;
+  align-items: center;
+  padding: 0 var(--espaco);
+  background: var(--cor-principal);
+  box-shadow: var(--sombra);
+}
+
+.cabecalho h1 {
+  margin: 0 0 0 0.75rem;
+  font-size: 1.3rem;
+  color: white;
+}
+
+.menu {
+  margin-left: auto;
+}
+
+.menu-toggle {
+  position: absolute;
+  opacity: 0;
+}
+
+.menu-botao {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: var(--cor-destaque);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.menu-toggle:focus-visible + .menu-botao {
+  outline: 2px solid var(--cor-destaque);
+}
+
+.menu-lista {
+  display: none;
+  position: absolute;
+  top: var(--altura-topo);
+  right: 0;
+  width: 100%;
+  max-width: 320px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background: var(--cor-menu);
+  box-shadow: var(--sombra);
+}
+
+.menu-toggle:checked ~ .menu-lista {
+  display: block;
+}
+
+.menu-lista a {
+  display: block;
+  padding: 1rem 2rem;
+  color: white;
+  text-decoration: none;
+}
+
+.menu-lista a:hover,
+.menu-lista a:focus-visible {
+  background: var(--cor-destaque);
+  color: var(--cor-principal);
+}
+
+.secao {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: var(--espaco);
+}
+
+.secao-larga {
+  max-width: 1100px;
+}
+
+figure {
+  margin: 2rem 0;
+}
+
+figcaption {
+  font-size: 0.9rem;
+  color: #4a5270;
+}
+
+.referencias {
+  overflow-wrap: anywhere;
+}
+
+.galeria-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espaco);
+}
+
+.galeria-flex figure {
+  flex: 1 1 220px;
+  min-width: 0;
+  margin: 0;
+}
+
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--espaco);
+}
+
+.galeria-grid figure {
+  margin: 0;
+}
+
+.galeria-flex img,
+.galeria-grid img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: var(--raio);
+  transition: transform 0.2s;
+}
+
+.galeria-flex img:hover,
+.galeria-grid img:hover {
+  transform: scale(1.03);
+}
+
+.formulario {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: var(--espaco);
+  align-items: center;
+  padding: 1.5rem;
+  background: var(--cor-suave);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+}
+
+.formulario label {
+  font-weight: 700;
+}
+
+.formulario input,
+.formulario select,
+.formulario textarea {
+  width: 100%;
+  padding: 0.6rem;
+  font: inherit;
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  background: white;
+}
+
+.formulario textarea {
+  resize: vertical;
+}
+
+.formulario input:focus,
+.formulario select:focus,
+.formulario textarea:focus {
+  outline: 2px solid var(--cor-menu);
+}
+
+.botoes {
+  grid-column: 2;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.formulario button {
+  padding: 0.7rem 1.5rem;
+  font: inherit;
+  font-weight: 700;
+  color: var(--cor-principal);
+  background: var(--cor-destaque);
+  border: 2px solid var(--cor-destaque);
+  border-radius: var(--raio);
+  cursor: pointer;
+}
+
+.formulario .botao-secundario {
+  color: var(--cor-principal);
+  background: transparent;
+  border-color: var(--cor-principal);
+}
+
+.rodape {
+  margin-top: 2rem;
+  padding: var(--espaco);
+  text-align: center;
+  color: white;
+  background: var(--cor-principal);
+}
+
+@media (max-width: 600px) {
+  .formulario {
+    grid-template-columns: 1fr;
+    gap: 0.4rem;
+    padding: var(--espaco);
+  }
+
+  .botoes {
+    grid-column: 1;
+    margin-top: var(--espaco);
+  }
+}
